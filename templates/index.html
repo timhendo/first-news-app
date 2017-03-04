@@ -3,5 +3,28 @@
     <head></head>
     <body>
         <h1>Deaths during the L.A. riots</h1>
+        <table border=1 cellpadding=7>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Age</th>
+                <th>Type</th>
+                <th>Story</th>
+                <th>Disposition</th>
+                <th>Neighborhood/<th>
+
+            </tr>
+            {% for obj in object_list %}
+            <tr>
+                <td><i>{{ obj.full_name }}</i></td>
+                <td>{{ obj.date }}</td>
+                <td>{{ obj.age }}</td>
+                <td>{{ obj.type }}</td>
+                <td>{{ obj.story }}</td>
+                <td>{{ obj.disposition }}</td>
+                 <td>{{ obj.neighborhood }}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </body>
 </html>
